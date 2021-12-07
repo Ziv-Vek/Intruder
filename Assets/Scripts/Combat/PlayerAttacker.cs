@@ -13,15 +13,31 @@ namespace Shooter.Combat
         [SerializeField] AudioClip hitSFX;
         [Tooltip("Delay in sec before level restart after player died")]
         [SerializeField] float delayLevelRestart = 1f;
+        [SerializeField] ParticleSystem activeWeaponParticle;
 
         // cached refernces
         AudioSource myAudioSource;
+        PlayerInput myInput;
 
         // stats
         bool isAlive = true;
         
         private void Start() {
             myAudioSource = GetComponent<AudioSource>();
+            activeWeaponParticle.Stop();
+            myInput = GetComponent<PlayerInput>();
+        }
+
+        private void Update() {
+            var weaponEmission = activeWeaponParticle.emission;
+            if (myInput.fire == true)
+            {
+                weaponEmission.enabled = true;
+            }
+            // else
+            // {
+            //     weaponEmission.enabled = false;
+            // }
         }
 
         private void OnParticleCollision(GameObject hittingParticle)

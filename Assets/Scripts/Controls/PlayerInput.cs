@@ -14,6 +14,7 @@ namespace Shooter.Controls
         public float roll = 0f;
         public bool jump;
         public bool sprint;
+        public bool fire;
         public Vector2 hoverVector;
 
         [Header("Movement Settings")]
@@ -54,6 +55,11 @@ namespace Shooter.Controls
             HoverInput(value.Get<Vector2>());
         }
 
+        public void OnFire(InputValue value)
+        {
+            FireInput(value.isPressed);
+        }
+
 
 #else
 	// old input sys if we do decide to have it (most likely wont)...
@@ -85,6 +91,11 @@ namespace Shooter.Controls
         public void HoverInput(Vector2 newHoverDirection)
         {
             hoverVector = newHoverDirection;
+        }
+
+        public void FireInput(bool newFireState)
+        {
+            fire = newFireState;
         }
 
     }
