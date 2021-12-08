@@ -82,9 +82,14 @@ namespace Shooter.Combat
 
         private void OnParticleCollision(GameObject hittingParticle)
         {
-            int damage = hittingParticle.GetComponent<Weapon>().Damage;
+            Debug.Log("collision from :" + gameObject.name);
+            int damage = hittingParticle.GetComponentInParent<Weapon>().Damage;
             GetComponent<Health>().TakeDamage(damage);
             int currentHealth = GetComponent<Health>().GetCurrentHealth;
+            if (currentHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
         }
         
         private void OnDrawGizmosSelected() {

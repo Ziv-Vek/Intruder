@@ -272,10 +272,24 @@ MonoBehaviour:
   roll: 0
   jump: 0
   sprint: 0
+  fire: 0
   hoverVector: {x: 0, y: 0}
   analogMovement: 0
   cursorLocked: 1
   cursorInputForLook: 1
+--- !u!114 &8311999623022074838
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8790531887263080637}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a6a0bfff209ccb74bab60bcc6d3eba18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activeWeaponParticle: {fileID: 0}
 --- !u!114 &8680025509558897955
 MonoBehaviour:
   m_ObjectHideFlags: 0
