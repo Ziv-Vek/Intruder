@@ -1,5 +1,18 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!65 &7968403479097362905
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7661058741828144586}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.7, y: 3.8, z: 3.7}
+  m_Center: {x: 0, y: 0.7, z: 0}
 --- !u!114 &-5786690810378365641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31,19 +44,18 @@ MonoBehaviour:
   attackDistance: 75
   delayBetweenLockingAndScan: 3
   shootParticlse: {fileID: 7492436459249133101}
---- !u!65 &7968403479097362905
-BoxCollider:
+--- !u!114 &1025368750509339031
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7661058741828144586}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.7, y: 3.8, z: 3.7}
-  m_Center: {x: 0, y: 0.7, z: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec25ec7de5efbad4a81404feeb2f66d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1920591612522066736
 GameObject:
   m_ObjectHideFlags: 0
@@ -55,7 +67,7 @@ GameObject:
   - component: {fileID: 4573822443333142075}
   m_Layer: 0
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -87,7 +99,7 @@ GameObject:
   - component: {fileID: 8581278443388011044}
   m_Layer: 0
   m_Name: Scanning Light
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -181,7 +193,7 @@ GameObject:
   - component: {fileID: 7493781185850212057}
   m_Layer: 0
   m_Name: Turret Head
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -345,7 +357,7 @@ GameObject:
   - component: {fileID: 7347768621014498421}
   m_Layer: 0
   m_Name: Rotation Ball
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -701,14 +713,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 827710721757917438764a59a46a42bc, type: 3}
---- !u!1 &7661058741828144586 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8996819838005877363, guid: 827710721757917438764a59a46a42bc, type: 3}
-  m_PrefabInstance: {fileID: 1624272984016836537}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7252409756844932515 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8227847356608408090, guid: 827710721757917438764a59a46a42bc, type: 3}
+  m_PrefabInstance: {fileID: 1624272984016836537}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7661058741828144586 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8996819838005877363, guid: 827710721757917438764a59a46a42bc, type: 3}
   m_PrefabInstance: {fileID: 1624272984016836537}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4677880474629412450
@@ -726,6 +738,10 @@ PrefabInstance:
       propertyPath: EmissionModule.enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2815120038648836175, guid: 47b557b73329fc4419e8420a2566a59b, type: 3}
+      propertyPath: CollisionModule.collidesWith.m_Bits
+      value: 149
+      objectReference: {fileID: 0}
     - target: {fileID: 8336960383388574013, guid: 47b557b73329fc4419e8420a2566a59b, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -740,7 +756,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336960383388574013, guid: 47b557b73329fc4419e8420a2566a59b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00499
+      value: -0.00794
       objectReference: {fileID: 0}
     - target: {fileID: 8336960383388574013, guid: 47b557b73329fc4419e8420a2566a59b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -748,7 +764,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8336960383388574013, guid: 47b557b73329fc4419e8420a2566a59b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8336960383388574013, guid: 47b557b73329fc4419e8420a2566a59b, type: 3}
       propertyPath: m_LocalRotation.w

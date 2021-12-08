@@ -36,6 +36,7 @@ namespace Shooter.Combat
 
             if (IsPlayerInRange())
             {
+                shootParticlse.Play();
                 LookAtPlayer();
                 ShootSequence();
                 timeFromLastTargetedPlayer = 0f;
@@ -62,12 +63,10 @@ namespace Shooter.Combat
         {
             var emissionModule = shootParticlse.emission;
             emissionModule.enabled = true; 
-            shootParticlse.Play();
         }
 
         private void StopShooting()
         {
-            shootParticlse.Stop();
             var emissionModule = shootParticlse.emission;
             emissionModule.enabled = false;
         }
@@ -77,18 +76,6 @@ namespace Shooter.Combat
             if (scanningObject != null && timeFromLastTargetedPlayer > delayBetweenLockingAndScan)
             {
                scanningObject.transform.Rotate(Vector3.up, scanningRotationSpeed * Time.deltaTime, Space.Self);
-            }
-        }
-
-        private void OnParticleCollision(GameObject hittingParticle)
-        {
-            Debug.Log("collision from :" + gameObject.name);
-            int damage = hittingParticle.GetComponentInParent<Weapon>().Damage;
-            GetComponent<Health>().TakeDamage(damage);
-            int currentHealth = GetComponent<Health>().GetCurrentHealth;
-            if (currentHealth <= 0)
-            {
-                Destroy(gameObject);
             }
         }
         

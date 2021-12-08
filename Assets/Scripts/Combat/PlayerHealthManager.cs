@@ -24,10 +24,9 @@ namespace Shooter.Combat
             myAudioSource = GetComponent<AudioSource>();
         }
 
-        private void OnParticleCollision(GameObject hittingParticle)
+        public void ProcessHit(int damage)
         {
             Debug.Log("collision from :" + gameObject.name);
-            int damage = hittingParticle.GetComponentInParent<Weapon>().Damage;
             GetComponent<Health>().TakeDamage(damage);
             myAudioSource.PlayOneShot(hitSFX);
             int currentHealth = GetComponent<Health>().GetCurrentHealth;

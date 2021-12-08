@@ -10,28 +10,27 @@ namespace Shooter.Combat
         [SerializeField] int damage = 20;
         public int Damage { get { return damage; } }
 
+        GameObject player;
 
-        // private void OnParticleCollision(GameObject hittedGameObject)
-        // {
-        //     if (hittedGameObject.GetComponent<Health>() == null)
-        //     {
-        //         return;
-        //     }
-        //     else if (hittedGameObject.tag == "Player")
-        //     {
-
-        //     }
-        //     else
-        //     {
-
-        //     }
-
-
-        //     int damage = hittingParticle.GetComponent<Weapon>().Damage;
-        //     GetComponent<Health>().TakeDamage(damage);
-        //     int currentHealth = GetComponent<Health>().GetCurrentHealth;
-        // }
-
+        private void Start() {
+            player = GameObject.FindWithTag("Player");
+        }
+    
+        private void OnParticleCollision(GameObject hittedGameObject)
+        {
+            if (hittedGameObject.GetComponent<Health>() == null)
+            {
+                return;
+            }
+            else if (hittedGameObject.tag == "Player")
+            {
+                hittedGameObject.GetComponent<PlayerHealthManager>().ProcessHit(damage);
+            }
+            else
+            {
+                hittedGameObject.GetComponent<EnemyHealth>().ProcessHit(damage);
+            }
+        }
     }
 }
 

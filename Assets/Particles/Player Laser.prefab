@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4343290935929215456}
   - component: {fileID: 4343290935929215457}
   - component: {fileID: 4343290935929215458}
-  - component: {fileID: 6515217946183175801}
+  - component: {fileID: 5346807696931569930}
   m_Layer: 0
   m_Name: Player Laser
   m_TagString: Untagged
@@ -3784,7 +3784,7 @@ ParticleSystem:
     radiusScale: 1.5
     collidesWith:
       serializedVersion: 2
-      m_Bits: 21
+      m_Bits: 85
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
@@ -4805,7 +4805,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &6515217946183175801
+--- !u!114 &5346807696931569930
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4814,6 +4814,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4343290935929215459}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8ba49475317f0d247916c8b09e957efc, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a44274e708176d40ae5576bdf9a85cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damage: 30
