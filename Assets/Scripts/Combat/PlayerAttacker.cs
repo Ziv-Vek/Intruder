@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Shooter.Controls;
 using Shooter.Core;
+using System;
 
 namespace Shooter.Combat
 {
@@ -16,31 +17,20 @@ namespace Shooter.Combat
 
         void Start()
         {
-            //activeWeaponParticle.Play();
             myInput = GetComponent<PlayerInput>();
+            activeWeaponParticle.Play();
         }
 
         void Update()
         {
-            var weaponEmission = activeWeaponParticle.emission;
-            if (myInput.fire == true)
-            {
-                activeWeaponParticle.Play();
-                //weaponEmission.enabled = true;
-                //activeWeaponParticle.Play();
-
-            }
-            else
-            {
-                activeWeaponParticle.Stop();
-                
-                //weaponEmission.enabled = false;
-                //activeWeaponParticle.Pause();
-
-            }
+            Fire(myInput.fire);
         }
 
-
+        private void Fire(bool enableShooting)
+        {
+            var weaponEmission = activeWeaponParticle.emission;
+            weaponEmission.enabled = enableShooting;
+        }
     }
 }
 

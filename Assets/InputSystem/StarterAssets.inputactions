@@ -16,7 +16,7 @@
                 {
                     "name": "Roll",
                     "type": "Value",
-                    "id": "dec69774-92d7-4b07-90a0-c1478e38ff43",
+                    "id": "523132da-dba3-41ea-a0e3-d58bd7bfcc21",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -24,7 +24,7 @@
                 {
                     "name": "Hover",
                     "type": "Value",
-                    "id": "712ebaaa-95b0-4b2f-b0d1-20e77d826bf9",
+                    "id": "c033a2ef-7edd-4ff6-a0d2-d4a88dbcd32b",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": ""
@@ -38,7 +38,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Fire_old",
+                    "name": "Jump",
                     "type": "Button",
                     "id": "8c4abdf8-4099-493a-aa1a-129acec7c3df",
                     "expectedControlType": "Button",
@@ -56,7 +56,7 @@
                 {
                     "name": "Fire",
                     "type": "PassThrough",
-                    "id": "6541710a-348d-4a62-9a10-dccf85458cd5",
+                    "id": "59151e22-58d7-4e4b-ab13-f063e3c8e674",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": ""
@@ -202,7 +202,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "KeyboardMouse",
-                    "action": "Fire_old",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -213,18 +213,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "Fire_old",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "1d3a856d-0c47-419c-8a74-f6abe1938074",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Fire_old",
+                    "action": "Jump",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -251,41 +240,8 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "EQ",
-                    "id": "d2179005-23bf-47e3-a0c7-46f9136d4df1",
-                    "path": "2DVector(mode=1)",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Hover",
-                    "isComposite": true,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "up",
-                    "id": "f2efd057-e7e4-46ce-ae2e-e0617a515630",
-                    "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Hover",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
-                    "name": "down",
-                    "id": "bd660ac4-36ee-4c68-b46b-34bcd2efccc7",
-                    "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Hover",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
-                {
                     "name": "XZ",
-                    "id": "f51f2ff4-4720-4cda-995b-06312e19e635",
+                    "id": "50833259-1558-4d04-9acc-13682a174549",
                     "path": "2DVector(mode=1)",
                     "interactions": "",
                     "processors": "",
@@ -296,7 +252,7 @@
                 },
                 {
                     "name": "left",
-                    "id": "6714018c-269a-49e1-874a-c0e9f0e1d2db",
+                    "id": "ebfdc63b-14b2-455f-ba05-bf90ff281cce",
                     "path": "<Keyboard>/x",
                     "interactions": "",
                     "processors": "",
@@ -307,7 +263,7 @@
                 },
                 {
                     "name": "right",
-                    "id": "6a7cfbd8-ad05-440c-97e5-f1d31e7f49ff",
+                    "id": "6787581c-8d96-44af-9f1e-24c6a5a5de33",
                     "path": "<Keyboard>/z",
                     "interactions": "",
                     "processors": "",
@@ -317,19 +273,41 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "8615f9c4-d528-428e-81ef-ee017e107c9f",
-                    "path": "<Keyboard>/space",
+                    "name": "EQ",
+                    "id": "098013a1-6cd6-4764-a195-8f35e6d3d655",
+                    "path": "2DVector(mode=1)",
                     "interactions": "",
                     "processors": "",
-                    "groups": "KeyboardMouse",
-                    "action": "Fire",
-                    "isComposite": false,
+                    "groups": "",
+                    "action": "Hover",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
+                    "name": "up",
+                    "id": "95d72e49-e16f-4e69-b976-328ff79a0adf",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Hover",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "down",
+                    "id": "42188064-962d-4244-84a8-ba0d8887e49c",
+                    "path": "<Keyboard>/q",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Hover",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
-                    "id": "54a7b9f9-0b80-4b6b-8673-77056b08e03e",
+                    "id": "32a5bf18-afb0-4be8-b60f-e1ae10cf05e7",
                     "path": "<Mouse>/leftButton",
                     "interactions": "",
                     "processors": "",
