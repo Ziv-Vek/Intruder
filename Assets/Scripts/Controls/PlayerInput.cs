@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
 using UnityEngine.InputSystem;
@@ -16,6 +17,7 @@ namespace Shooter.Controls
         public bool sprint;
         public bool fire;
         public Vector2 hoverVector;
+        public bool headlights = false;
 
         [Header("Movement Settings")]
         public bool analogMovement;
@@ -60,6 +62,11 @@ namespace Shooter.Controls
             FireInput(value.isPressed);
         }
 
+        public void OnHeadlights(InputValue value)
+        {
+            HeadlightsInput(value.isPressed);
+        }
+
 
 #else
 	// old input sys if we do decide to have it (most likely wont)...
@@ -97,6 +104,12 @@ namespace Shooter.Controls
         {
             fire = newFireState;
         }
+
+        public void HeadlightsInput(bool newHeadlights)
+        {
+            headlights = !headlights;
+        }
+        
 
     }
 

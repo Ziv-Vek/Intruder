@@ -34,6 +34,8 @@ namespace Shooter.Controls
         public float TopClamp = 90.0f;
         [Tooltip("How far in degrees can you move the camera down")]
         public float BottomClamp = -90.0f;
+        
+        [SerializeField] Light headlightsComponent;
 
         // cinemachine
         float _cinemachineTargetPitch;
@@ -87,6 +89,12 @@ namespace Shooter.Controls
             RotatePlayer();
             RollPlayer();
             Move();
+            TurnHeadlightsOnOff();
+        }
+
+        private void TurnHeadlightsOnOff()
+        {
+            headlightsComponent.enabled = _input.headlights;
         }
 
         private void RotatePlayer()

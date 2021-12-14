@@ -10,6 +10,12 @@ namespace Shooter.Combat
         [SerializeField] int damage = 20;
         public int Damage { get { return damage; } }
 
+        [SerializeField] float range = Mathf.Infinity;
+        public float Range { get { return range; } }
+
+        [SerializeField] AudioClip shootingAudio;
+        public AudioClip ShootingAudio { get { return shootingAudio; } }
+
         GameObject player;
 
         private void Start() {
