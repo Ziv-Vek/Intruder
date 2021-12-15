@@ -27,13 +27,13 @@ CharacterController:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Height: 2
-  m_Radius: 0.5
+  m_Height: 8.44
+  m_Radius: 4.17
   m_SlopeLimit: 45
   m_StepOffset: 0.25
   m_SkinWidth: 0.02
   m_MinMoveDistance: 0
-  m_Center: {x: 0, y: 0.93, z: 0}
+  m_Center: {x: 0, y: -0.48, z: 0}
 --- !u!65 &8871284429559062661
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -305,10 +305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3250b0a124f4a648a076c995bd64464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 15
-  SprintSpeed: 45
+  MoveSpeed: 35
+  SprintSpeed: 70
   RotationSpeed: 3
-  SpeedChangeRate: 10
+  SpeedChangeRate: 50
   rollSpeed: 50
   hoverSpeed: 3
   CinemachineCameraTarget: {fileID: 0}
