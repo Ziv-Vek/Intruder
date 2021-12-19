@@ -51,6 +51,7 @@ namespace Shooter.Controls
         CharacterController _controller;
         PlayerInput _input;
         GameObject _mainCamera;
+        Animator _myAnimator;
 
         const float _threshold = 0.01f;
         bool enableControls = true;
@@ -70,6 +71,7 @@ namespace Shooter.Controls
 
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<PlayerInput>();
+            _myAnimator = GetComponent<Animator>();
 
             StartCoroutine("ResetRotation");
         }
@@ -161,6 +163,9 @@ namespace Shooter.Controls
 
             // move the player
             _controller.Move(inputDirection.normalized * (_speed * Time.deltaTime) + new Vector3(0.0f, _verticalVelocity, 0.0f) * hoverSpeed * Time.deltaTime);
+
+            // player hovering animation
+            _myAnimator.SetFloat("forwardSpeed", inputDirection.magnitude);
         }
 
         private static float ClampAngle(float lfAngle, float lfMin, float lfMax)

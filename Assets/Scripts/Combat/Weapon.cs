@@ -34,7 +34,14 @@ namespace Shooter.Combat
             }
             else
             {
-                hittedGameObject.GetComponent<EnemyHealth>().ProcessHit(damage);
+                if (hittedGameObject.GetComponent<EnemyHealth>())
+                {
+                    hittedGameObject.GetComponent<EnemyHealth>().ProcessHit(damage);
+                }
+                if (hittedGameObject.GetComponent<Health>())
+                {
+                    hittedGameObject.GetComponent<Health>().TakeDamage(damage);
+                }
             }
         }
     }
