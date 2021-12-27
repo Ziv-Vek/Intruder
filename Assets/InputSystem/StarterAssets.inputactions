@@ -68,6 +68,22 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "WeaponScroll",
+                    "type": "PassThrough",
+                    "id": "a85f0a21-ab8d-495c-b148-7ef5c347d93c",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "WeaponSelectKeyboardNum",
+                    "type": "Button",
+                    "id": "ae19d336-7f13-41a6-9747-8f52b1f1cb03",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -76,7 +92,7 @@
                     "id": "b7594ddb-26c9-4ba2-bd5a-901468929edc",
                     "path": "2DVector(mode=1)",
                     "interactions": "",
-                    "processors": "",
+                    "processors": "NormalizeVector2",
                     "groups": "",
                     "action": "Move",
                     "isComposite": true,
@@ -332,6 +348,50 @@
                     "processors": "",
                     "groups": "KeyboardMouse",
                     "action": "Headlights",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "234167fd-d281-4019-abbd-aa8f3255be58",
+                    "path": "<Mouse>/scroll/y",
+                    "interactions": "",
+                    "processors": "Normalize(min=-1,max=1),Scale(factor=200)",
+                    "groups": "KeyboardMouse",
+                    "action": "WeaponScroll",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c32672f2-546f-4f4b-9fc8-036b24f07382",
+                    "path": "<Keyboard>/1",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "WeaponSelectKeyboardNum",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0b72a3c5-a5b3-46cd-b4c0-07667b41431a",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "WeaponSelectKeyboardNum",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "796f9beb-935d-440c-ab7e-c4ac013aad75",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "WeaponSelectKeyboardNum",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
