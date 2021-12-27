@@ -7,6 +7,9 @@ namespace Shooter.Combat
 {
     public class Weapon : MonoBehaviour
     {
+        [SerializeField] WeaponType weaponType;
+        public WeaponType GetWeaponType { get { return weaponType; } }
+        
         [SerializeField] int damage = 20;
         public int Damage { get { return damage; } }
 
@@ -18,7 +21,7 @@ namespace Shooter.Combat
 
         GameObject player;
 
-        private void Start() {
+        private void Awake() {
             player = GameObject.FindWithTag("Player");
         }
     

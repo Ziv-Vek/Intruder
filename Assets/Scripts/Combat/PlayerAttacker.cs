@@ -107,6 +107,12 @@ namespace Shooter.Combat
         {
             crosshair.GetComponent<Image>().color = color;
         }
+
+        public void SetActiveWeapon(ParticleSystem selectedWeapon)
+        {
+            activeWeaponParticle = selectedWeapon;
+            activeWeaponParticle.Play();
+        }
     }
 }
 

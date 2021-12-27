@@ -18,6 +18,7 @@ namespace Shooter.Controls
         public bool fire;
         public Vector2 hoverVector;
         public bool headlights = false;
+        public float weaponScroll = 0f;
 
         [Header("Movement Settings")]
         public bool analogMovement;
@@ -67,6 +68,11 @@ namespace Shooter.Controls
             HeadlightsInput(value.isPressed);
         }
 
+        public void OnWeaponScroll(InputValue value)
+        {
+            WeaponScrollInput(value.Get<float>());
+        }
+
 
 #else
 	// old input sys if we do decide to have it (most likely wont)...
@@ -108,6 +114,11 @@ namespace Shooter.Controls
         public void HeadlightsInput(bool newHeadlights)
         {
             headlights = !headlights;
+        }
+
+        public void WeaponScrollInput(float newWeaponScroll)
+        {
+            weaponScroll = newWeaponScroll;
         }
         
 
