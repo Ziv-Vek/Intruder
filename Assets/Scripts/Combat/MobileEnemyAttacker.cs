@@ -8,7 +8,7 @@ namespace Shooter.Combat
     public class MobileEnemyAttacker : MonoBehaviour
     {
         [SerializeField] Transform target;
-        [SerializeField] Transform patrolRoute;
+        //[SerializeField] Transform patrolRoute;
 
         NavMeshAgent myNavMeshAgent;
 
