@@ -1,18 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
-public class MobileEnemyAttacker : MonoBehaviour
+namespace Shooter.Combat
 {
-    // Start is called before the first frame update
-    void Start()
+    public class MobileEnemyAttacker : MonoBehaviour
     {
-        
-    }
+        [SerializeField] Transform target;
+        [SerializeField] Transform patrolRoute;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        NavMeshAgent myNavMeshAgent;
+
+        private void Awake() {
+            myNavMeshAgent = GetComponent<NavMeshAgent>();
+        }
+
+        void Update()
+        {
+            myNavMeshAgent.SetDestination(target.position);
+        }
     }
 }
+
+
