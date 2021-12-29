@@ -82,8 +82,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3451282523014886691, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
+      propertyPath: m_Speed
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: -3451282523014886691, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
+      propertyPath: m_Height
+      value: 8.12
+      objectReference: {fileID: 0}
+    - target: {fileID: -3451282523014886691, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
+      propertyPath: m_Radius
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -3451282523014886691, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
+      propertyPath: m_BaseOffset
+      value: 5.22
+      objectReference: {fileID: 0}
+    - target: {fileID: -3451282523014886691, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
       propertyPath: m_AgentTypeID
       value: -334000983
+      objectReference: {fileID: 0}
+    - target: {fileID: -3451282523014886691, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
+      propertyPath: m_Acceleration
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2677825442562399044, guid: afd9c52d6f11c1e4cbc98160812ed8ad, type: 3}
       propertyPath: m_Size.x
